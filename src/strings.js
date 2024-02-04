@@ -1,26 +1,27 @@
-function sayHello (string) {
-  // your code here
-};
+// Create the following functions:
+function sayHello(name) {
+  return `Hello, ${name}!`;
+}
 
-function uppercase (string) {
-  // your code here
-};
+function uppercase(str) {
+  return str.toUpperCase();
+}
 
-function lowercase (string) {
-  // your code here
-};
+function lowercase(str) {
+  return str.toLowerCase();
+}
 
-function countCharacters (string) {
-  // your code here
-};
+function countCharacters(str) {
+  return str.length;
+}
 
-function firstCharacter (string) {
-  // your code here
-};
+function firstCharacter(str) {
+  return str.charAt(0);
+}
 
-function firstCharacters (string, n) {
-  // your code here
-};
+function firstCharacters(str, count) {
+  return str.slice(0, count);
+}
 
 module.exports = {
   sayHello,

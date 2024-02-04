@@ -1,42 +1,59 @@
+/* eslint-disable prettier/prettier */
 const createPerson = (name, age) => {
-  // your code here
+  return {
+    name,age
+  };
 };
 
-const getName = object => {
-  // your code here
-};
+function getName(person) {
+  return person.name;
+}
 
-const getProperty = (property, object) => {
-  // your code here
-};
+function getProperty(propertyName, object) {
+  return object[propertyName];
+}
 
-const hasProperty = (property, object) => {
-  // your code here
-};
+function hasProperty(propertyName, object) {
+  return propertyName in object;
+}
 
-const isOver65 = person => {
-  // your code here
-};
+function isOver65(person) {
+  return person.age > 65;
+}
 
-const getAges = people => {
-  // your code here
-};
+function getAges(people) {
+  return people.map(person => person.age);
+}
 
-const findByName = (name, people) => {
-  // your code here
-};
+function findByName(name, people) {
+  return people.find(person => person.name === name);
+}
 
-const findHondas = cars => {
-  // your code here
-};
 
-const averageAge = people => {
-  // your code here
-};
+function findHondas(cars) {
+  return cars.filter(car => car.manufacturer === 'Honda');
+}
 
-const createTalkingPerson = (name, age) => {
-  // your code here
-};
+function averageAge(people) {
+  if (people.length === 0) {
+    return 0;
+  }
+
+  const totalAge = people.reduce((sum, person) => sum + person.age, 0);
+  return totalAge / people.length;
+}
+
+function createTalkingPerson(name, age) {
+  const person = {
+    name,
+    age,
+    introduce(otherPersonName) {
+      return `Hi ${otherPersonName}, my name is ${this.name} and I am ${this.age}!`;
+    }
+  };
+
+  return person;
+}
 
 module.exports = {
   createPerson,

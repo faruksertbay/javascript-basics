@@ -1,45 +1,46 @@
-function add (a, b) {
-  // your code here
+// Export each of the functions below.
+function add(a, b) {
+  return a + b;
 }
 
-function subtract (a, b) {
-  // your code here
+function subtract(a, b) {
+  return a - b;
 }
 
-function multiply (a, b) {
-  // your code here
+function multiply(a, b) {
+  return a * b;
 }
 
-function divide (a, b) {
-  // your code here
+function divide(a, b) {
+  return a / b;
 }
 
-function power (a, b) {
-  // your code here
+function power(a, b) {
+  return a ** b;
 }
 
-function round (a) {
-  // your code here
+function round(a) {
+  return Math.round(a);
 }
 
-function roundUp (a) {
-  // your code here
+function roundUp(number) {
+  return Math.ceil(number);
 }
 
-function roundDown (a) {
-  // your code here
+function roundDown(a) {
+  return Math.floor(a);
 }
 
-function absolute (a) {
-  // your code here
+function absolute(number) {
+  return Math.abs(number);
 }
 
-function quotient (a, b) {
-  // your code here
+function quotient(a, b) {
+  return Math.trunc(a / b);
 }
 
-function remainder (a, b) {
-  // your code here
+function remainder(a, b) {
+  return a % b;
 }
 
 module.exports = {
@@ -49,9 +50,9 @@ module.exports = {
   divide,
   power,
   round,
-  roundUp,
   roundDown,
+  roundUp,
   absolute,
   quotient,
   remainder
-}
+};

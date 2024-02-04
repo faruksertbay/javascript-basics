@@ -1,62 +1,69 @@
-const getNthElement = (index, array) => {
-  // your code here
-};
+/* eslint-disable prettier/prettier */
+function getNthElement(index, array) {
+  return array[index % array.length];
+}
 
-const arrayToCSVString = array => {
-  // your code here
-};
+function arrayToCSVString(array) {
+  return array.join(',');
+}
 
-const csvStringToArray = string => {
-  // your code here
-};
+function csvStringToArray(string) {
+  return string.split(',');
+}
 
-const addToArray = (element, array) => {
-  // your code here
-};
+function addToArray(item, array) {
+  array.push(item);
+}
 
-const addToArray2 = (element, array) => {
-  // your code here
-};
+function addToArray2(item, array) {
+  return [...array, item];
+}
 
-const removeNthElement = (index, array) => {
-  // your code here
-};
+function removeNthElement(index, array) {
+  array.splice(index, 1);
+  return array;
+}
 
-const numbersToStrings = numbers => {
-  // your code here
-};
+function numbersToStrings(array) {
+  return array.map(String);
+}
 
-const uppercaseWordsInArray = strings => {
-  // your code here
-};
+function uppercaseWordsInArray(array) {
+  return array.map(word => word.toUpperCase());
+}
 
-const reverseWordsInArray = strings => {
-  // your code here
-};
+function reverseWordsInArray(array) {
+  return array.map(word => 
+    word
+      .split('')
+      .reverse()
+      .join('')
+  );
+}
 
-const onlyEven = numbers => {
-  // your code here
-};
+function onlyEven(array) {
+  return array.filter(num => num % 2 === 0);
+}
 
-const removeNthElement2 = (index, array) => {
-  // your code here
-};
+function removeNthElement2(index, array) {
+  return [...array.slice(0, index), ...array.slice(index + 1)];
+}
 
-const elementsStartingWithAVowel = strings => {
-  // your code here
-};
+function elementsStartingWithAVowel(array) {
+  return array.filter(word => /^[aeiou]/i.test(word));
+}
 
-const removeSpaces = string => {
-  // your code here
-};
+function removeSpaces(string) {
+  return string.replace(/\s/g, '');
+}
 
-const sumNumbers = numbers => {
-  // your code here
-};
+function sumNumbers(array) {
+  return array.reduce((sum, num) => sum + num, 0);
+}
 
-const sortByLastLetter = strings => {
-  // your code here
-};
+function sortByLastLetter(array) {
+  return array.sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
+}
 
 module.exports = {
   getNthElement,
